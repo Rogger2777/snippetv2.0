@@ -12,3 +12,7 @@
 
 - Chavez Jimenez Magdalena
 - Curipaco Simon Rogger
+
+<h1 align="center"> DIAGRAMA HIPO</h1>
+[![Diagrama-en-blanco.png](https://i.postimg.cc/bJXs1CKJ/Diagrama-en-blanco.png)](https://postimg.cc/8FHpSHkQ)
+

@@ -46,3 +46,5 @@ class EcuacionSegundoGrado:
         x1,x2=self.solucionESG ( )
         print ( f"X1 = {x1}" )
         print ( f"X2 = {x2}" )
+
+

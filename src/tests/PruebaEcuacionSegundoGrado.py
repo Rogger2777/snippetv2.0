@@ -24,6 +24,7 @@ class PruebaEcuacionSegundoGrado(unittest.TestCase):
         self.assertEqual(RaizEsperada2, RaizActual2)
 
 
+
     def test_solucionESG_parametrosNoNumericos_lanzaException(self):
         # Arrange
         ecuacionSegundoGrado = EcuacionSegundoGrado()
@@ -49,3 +50,23 @@ class PruebaEcuacionSegundoGrado(unittest.TestCase):
                 self.assertTrue(True)
                 with self.assertRaises(ValueError):
                     ecuacionSegundoGrado.definirParametros(item["a"], item["b"], item["c"])
+
+    def test_solucionESG_parametrosNumericos_raicesComplejasConjugadas(self):
+        # Arrange
+        ecuacionSegundoGrado = EcuacionSegundoGrado()
+        parametroA = 1
+        parametroB = 2
+        parametroC = 3
+
+        RaizEsperada1 = "-1.00+1.41i"
+        RaizEsperada2 = "-1.00-1.41i"
+
+        # Do
+        ecuacionSegundoGrado.definirParametros(parametroA, parametroB, parametroC)
+        RaizActual1, RaizActual2 = ecuacionSegundoGrado.solucionESG()
+
+        # Assert
+        self.assertEqual(RaizEsperada1, RaizActual1)
+        self.assertEqual(RaizEsperada2, RaizActual2)
+
+
